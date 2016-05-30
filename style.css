@@ -1,0 +1,2006 @@
+/* Table of Contents
+==================================================
+  #TYPOGRAPHY
+  #HEADER
+  #ABOUT & CHARACTER SECTION
+  #GALLERY SECTION
+  #TRAILER SECTION
+  #REVIEW SECTION
+  #REVIEW SECTION 2
+  #NEWSLETTER
+  #CONTACT
+  #FOOTER
+  #RESPONSIVE CSS 
+*/
+
+
+/*--------------------*/
+/* TYPOGRAPHY */
+/*--------------------*/
+/*Pirulen font for headers, navigation and slider*/
+@font-face {
+    font-family: 'pirulen';
+    src: url('font/pirulen-webfont.eot');
+    src: url('font/pirulen-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/pirulen-webfont.woff2') format('woff2'),
+         url('font/pirulen-webfont.woff') format('woff'),
+         url('font/pirulen-webfont.ttf') format('truetype'),
+         url('font/pirulen-webfont.svg#pirulenregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*body font Roboto*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('font/roboto-webfont.eot');
+    src: url('font/roboto-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/roboto-webfont.woff2') format('woff2'),
+         url('font/roboto-webfont.woff') format('woff'),
+         url('font/roboto-webfont.ttf') format('truetype'),
+         url('font/roboto-webfont.svg#pirulenregular') format('svg');
+roboto    font-style: normal;
+
+}
+
+   html{width:100%;height:100%;overflow-x:hidden;}
+/*CSS for the positioning and font of text on the Slider*/
+.slidertext{
+    font-family: 'pirulen', sans-serif; /* font used for header elements */
+   font-size:30px !important ;
+   margin-top: 200px; /*sets the top margin of the element*/
+   margin-bottom: 20px;/*sets the bottom margin of the element*/
+   width: 100% !important;
+   height: auto;/*height calculated by the browser*/
+   position: relative;/*positioned relative to its normal position, behaves similar to static but can edit extra properties*/
+   color: #FFFFFF;
+}
+.overlay-container {
+    position: relative;/*positioned relative to its normal position, behaves similar to static but can edit extra properties*/
+    display: block;
+    overflow: hidden;
+}
+/*images/icons of the review section*/
+.reviewimg{
+  border: none;
+  margin-left: auto;/*sets the left margin of the element*/
+  margin-right: auto;/*sets the right margin of the element*/
+}
+body{
+  overflow-x: hidden !important; 
+  
+}
+/*header tags h1-h6*/
+h1,h2,h3,h4,h5,h6{
+  font-family: 'pirulen', sans-serif; /* font used for header elements */
+  color: #FF0000; /* colour of the font, in this case red */
+}
+/*styling for h1 tags*/
+ h1 {
+  text-align: center;/*centers the text*/
+  color: #FF0000; /* colour of H1 tag (font) */
+  font-size: 47px; /* size of font used in H1 tag */
+  margin-bottom: 15px; /* sets the margin from the bottom of the element */
+  margin-top: 0; /* sets the margin from the top of the element */
+  font-weight: lighter; /*sets how the thickness of the font, lighter = thin */
+  
+}
+a:hover,a:focus{
+  text-decoration: none;
+  outline: none;/*sets the outline(drawn line) of an element*/
+}
+/*image styling*/
+img {
+    max-width: 100%;/*sets width of the element in percent of the container*/
+    height: auto;/*height calculated by the browser*/
+}
+/*container faid in time, half second*/
+.container{
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* Loading Gif */
+#preloader { /**/
+  position: fixed; /* position is relative to the browser window */
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#000; /* colour of background that gif loads onto */
+  z-index:99999; /* Assures that this element(gif) will stay atop all other elements e.g. navigation */
+}
+/*Non Breaking Space/Gif path*/
+#status {
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/ /* positions element to non-static ancestor element */
+  left: 0;
+  top: 0; /*specifies position of element*/
+  right: 0;
+  bottom: 0;
+  margin: auto; /* prevents from stretching to the edges of container */
+  background-image:url(img/status.gif); /* path of animation */
+  background-repeat:no-repeat; /* Makes sure the gif does not repeat itself */
+  background-position:center; /* centers the gif to the middle of the page */
+}
+/*style of button that take you to top of website*/
+.scrollToTop {
+  background: none repeat scroll 0 0 #FF0000;
+  border: 1px solid #FFFFFF; /*border colour*/
+  bottom: 50px;
+  color: #FFFFFF; /*foreground colour of text or element*/
+  display: none;
+  font-size: 32px; /* element size */
+  font-weight: bold;
+  height: 50px;/*sets the height of the element*/
+  position: fixed;
+  margin-bottom: 35px;
+  right: 30px;
+  text-align: center;/*centers the text*/
+  text-decoration: none;
+  width: 50px;
+  line-height: 50px;/*sets the line height e.g. the space between lines in the text content*/
+  z-index: 9998; /*sits ontop of all other elements*/
+  transform: rotate(45deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/*rotates square 50degrees to make it into a diamond*/
+.scrollToTop i{
+  transform: rotate(-45deg);
+} 
+/*styling of scrolltotop button when hovered over*/
+.scrollToTop:hover, .scrollToTop:focus{
+  background-color: #333; /*sets background colour of the element*/
+  color: #ff0000 !important;/*foreground colour of text or element*/
+  text-decoration: none;
+  outline: none;/*sets the outline(drawn line) of an element*/
+  border:1px solid #ff0000; 
+}
+
+/*--------------------*/
+/* HEADER */
+/*--------------------*/
+
+#headerArea{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+#header {
+  background-image: url("img/top_banner.png");
+  background-position: center center;
+  background-repeat: no-repeat;/*image will not be repeated*/
+  background-size: cover;/*scals img to cover background area*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.menuarea{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  left: 15%;
+  right: 15%;
+  z-index: 999;
+}
+/*die hard logo styling*/
+.logo {
+  color: #ffffff !important;/*foreground colour of text or element*/
+  display: block; 
+  font-size: 30px !important;
+  margin-bottom: 15px;/*sets the bottom margin of the element*/
+  margin-top: 15px;/*sets the top margin of the element*/
+  padding: 14px 10px; /*padding from top and left of screen*/
+  text-align: center;/*centers the text*/  
+}
+.logo > span {
+  color: #FF0000;/*foreground colour of text or element*/
+}
+/*styling of logo when hovered over*/
+.logo a:hover{
+  text-decoration: none; /*no style*/
+}
+/*navigation styling*/
+.navbar-default {
+ background-color:none; /*sets background colour to none*/
+ border-color: none;
+}
+.menu_area{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.custom_nav {
+  margin-top: 19px;/*sets the top margin of the element*/
+}
+#navbar{overflow-x: hidden;}
+.navbar-nav.navbar-right:last-child {
+  margin-right: -18px;/*sets the right margin of the element*/
+}
+/*styling of each element within navigation e.g. Home, About*/
+.custom_nav li a {
+  color: #FFFFFF !important;/*foreground colour of text or element*/
+  font-family: 'pirulen', sans-serif;
+  font-size: 15px;
+  margin-left: 5px;/*sets the left margin of the element*/
+  margin-right: 5px;/*sets the right margin of the element*/
+  padding-bottom: 15px; /*padding size in pixels from the bottom*/
+  padding-top: 12px;/*padding size in pixels from the top*/
+  text-transform: uppercase; 
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/*styling of prior CSS when hovered over*/
+.custom_nav li a:hover,.custom_nav li a:focus{
+  color: #FF0000 !important;/*foreground colour of text or element*/
+  text-decoration: none;
+  outline: none;/*sets the outline(drawn line) of an element*/
+}
+.past-main {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.95);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.header_content {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-top: 188px;/*sets the top margin of the element*/
+  text-align: center;/*centers the text*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.header_content h1 {
+  color: #fff;/*foreground colour of text or element*/
+  font-size: 50px; 
+  margin-top: 106px;/*sets the top margin of the element*/
+  margin-bottom: 6px;/*sets the bottom margin of the element*/
+}
+.header_content p {
+  color: #FFFFFF;/*foreground colour of text or element*/
+  font-size: 40px; 
+}
+.header_btnarea {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-bottom: 250px;/*sets the bottom margin of the element*/
+  margin-top: 50px;/*sets the top margin of the element*/
+  text-align: center;/*centers the text*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.learnmore_btn {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/  
+  font-size: 18px;
+  margin: 0 25px;
+  padding: 12px 0;
+  text-align: center;/*centers the text*/
+  width: 156px;
+  font-weight: bold;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.download_btn{
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/ 
+  font-size: 18px;
+  padding: 12px 0;
+  text-align: center;/*centers the text*/
+  width: 164px;
+  margin-right: 3px; /*sets the right margin of the element*/
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.learnmore_btn:hover,.learnmore_btn:focus,.download_btn:hover,.download_btn:focus{
+  background-color: #FF0000;/*sets background colour of the element*/
+  color: #fff;/*foreground colour of text or element*/
+  text-decoration: none;
+  outline: none;/*sets the outline(drawn line) of an element*/
+}
+.slide_descleft{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 40%;
+}
+.slide_descright{
+  float: right;
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 58%;
+  margin-top: 15%;/*sets the top margin of the element*/
+}
+.slide_descright h1 { 
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.slide_descright p{
+  color: #fff;/*foreground colour of text or element*/
+  font-size: 16px;
+}
+
+/*--------------------*/
+/* ABOUT & CHARACTER SECTION */
+/*--------------------*/
+/*styling of character section*/
+#characters {
+  background-color: #FFFFFF;/*sets background colour of the element*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  padding-top: 90px;/*padding size in pixels from the top*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  margin-bottom: 50px;
+  margin-top: 0px;/*sets the top margin of the element*/
+}
+/*styling of entire about section*/
+#aboutSection {
+  background-color: #FFFFFF;/*sets background colour of the element*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  padding-top: 10px;/*padding size in pixels from the top*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  margin-top: 20px;/*sets the top margin of the element*/
+}
+.about_ara{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  text-align: center;/*centers the text*/
+  margin-bottom: 50px; /*seperated the about section from the character section by 50px*/
+}
+.about_ara h1 {
+  color: #FF0000; /*foreground colour of text or element*/
+  font-size: 47px;
+  margin-bottom: 15px;/*sets the bottom margin of the element*/
+  margin-top: 80px; /*allows for space for anchor*/
+}
+.about_ara p {
+  color: #606060;/*foreground colour of text or element*/
+  font-size: 18px;
+  line-height: 28px;/*sets the line height e.g. the space between lines in the text content*/
+}
+.about_responsive {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-top: 67px;/*sets the top margin of the element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+
+.single_about_responsive {
+  border: 1px solid #DCDCDC;
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  padding: 15px 15px;
+  width: 100%;/*sets width of the element in percent of the container*/  
+  margin-left:0px;/*sets the left margin of the element*/
+}
+/*fontawesome film icon on the about section */
+.film_icon{
+  color: #FF0000;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  font-size: 48px !important;
+  margin-top: 70px;/*sets the top margin of the element*/
+}
+/*fontawesome building icon on the about section */
+.building-o_icon {
+  color: #FF0000;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  font-size: 48px !important;
+  margin-top: 70px;/*sets the top margin of the element*/
+}
+/*fontawesome character icon on the about section */
+.characters_icon{
+  color: #FF0000;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  font-size: 48px !important;
+  margin-top: 70px;/*sets the top margin of the element*/
+}
+.single_about_responsive img{
+  margin-top: 70px;/*sets the top margin of the element*/
+}
+.single_about_responsive h2 {
+  color: #666666;/*foreground colour of text or element*/
+  font-size: 29px;
+  margin-top: 49px;/*sets the top margin of the element*/
+}
+.single_about_responsive p {
+  color: #606060;/*foreground colour of text or element*/
+  font-size: 15px;
+  margin-top: 30px;/*sets the top margin of the element*/
+  text-align: left;
+}
+
+.about_productarea {
+  border-top: 1px solid #DCDCDC;
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  position: relative;/*positioned relative to its normal position, behaves similar to static but can edit extra properties*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.character_img{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 95%;
+  text-align: center;/*centers the text*/
+  margin-top: 7px;/*sets the top margin of the element*/
+}
+
+.character_content {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  text-align: left;
+  width: 100%;/*sets width of the element in percent of the container*/
+  margin-left: 0px;/*sets the left margin of the element*/
+}
+.about_widget{
+  margin-top: 35px;/*sets the top margin of the element*/
+}
+.character_content h1{
+  text-align: left;
+  color: #FF0000;  /*foreground colour of text or element*/
+  font-size: 47px;
+  margin-bottom: 30px;/*sets the bottom margin of the element*/
+  margin-top: 0px;  /*sets the top margin of the element*/
+}
+.character_content p{
+  text-align: left;
+  color: #606060;/*foreground colour of text or element*/
+  font-size: 17px;  
+}
+.img-responsive {
+  display: inline-block;/*inline element that behaves like a block element*/
+  height: auto;/*height calculated by the browser*/
+  max-width: 100%;/*sets width of the element in percent of the container*/
+}
+.likes_icon {
+  color: #FF0000;/*foreground colour of text or element*/
+  display: block;
+  font-size: 48px !important;
+  height: 50px;/*sets the height of the element*/
+  margin-top: 17px;/*sets the top margin of the element*/
+  width: 66px;
+}
+.media_content{padding-left: 6px;}/*padding size in pixels from the left*/
+.media_content h4{
+  color: #FF0000;/*foreground colour of text or element*/
+  font-size: 20px;  
+}
+.media_content p{
+  color: #606060;/*foreground colour of text or element*/
+  font-size: 17px;  
+}
+.direction_icon {
+  background: none repeat scroll 0 0 transparent;
+  left: 43%;
+  padding: 0 12px;
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  text-align: center;/*centers the text*/
+  top: -19px;
+  width: 185px;
+}
+.dirc_up {
+  border: 1px solid #E3E3E3;
+  background-color: #ffffff;
+  border-radius: 100%;
+  color: #666666;/*foreground colour of text or element*//*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  font-size: 30px;
+  height: 42px;/*sets the height of the element*/
+  margin-left: 10px;/*sets the left margin of the element*/
+  margin-right: 10px;/*sets the right margin of the element*/
+  width: 42px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.dirc_down{
+  border: 1px solid #E3E3E3;
+  background-color: #ffffff;
+  border-radius: 100%;
+  color: #666666;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  font-size: 30px;
+  height: 42px;/*sets the height of the element*/
+  width: 42px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.dirc_down:hover,.dirc_down:focus,.dirc_up:hover,.dirc_up:focus{
+  border: 1px solid #ff0000;
+  color: #FFFFFF;/*foreground colour of text or element*/
+  background-color: #ff0000;/*sets background colour of the element*/
+  outline: none;/*sets the outline(drawn line) of an element*/
+  text-decoration: none;
+}
+.secondabout_characters{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  margin-top:100px;/*sets the top margin of the element*/
+}
+.app_content{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  text-align: center;/*centers the text*/
+}
+.app_content h1 {
+  color: #FF0000; /*foreground colour of text or element*/ 
+  font-size: 47px;
+  margin-bottom: 15px;/*sets the bottom margin of the element*/
+}
+.app_content p{
+  color: #606060; /*foreground colour of text or element*/
+  font-size: 18px;
+  line-height: 28px;/*sets the line height e.g. the space between lines in the text content*/
+}
+.app_area {
+  background-color: #F8F8F8;/*sets background colour of the element*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-top: 185px;/*sets the top margin of the element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.app_img{
+  margin-top:-115px;/*sets the top margin of the element*/
+}
+.apparea_content h1{
+  margin-top: 38px;/*sets the top margin of the element*/
+}
+.chapterNav {
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.chapterNav li {
+   -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #DCDCDC;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 1px medium;
+  background-color: #f8f8f8;/*sets background colour of the element*/
+}
+.chapterNav li:last-child{
+ border-bottom: 1px solid #DCDCDC;
+}
+.chapterNav li a{
+  color: #606060; /*foreground colour of text or element*/
+  font-size: 18px;
+  line-height: 28px;/*sets the line height e.g. the space between lines in the text content*/
+}
+.chapterNav li a:hover,.chapterNav li a:focus{
+  background-color: #fff;/*sets background colour of the element*/
+  text-decoration: none;
+  outline: none;/*sets the outline(drawn line) of an element*/
+}
+.appdownload_area {
+  background-image: url("img/download_bg.png");
+  background-repeat: no-repeat;/*image will not be repeated*/
+  background-size: cover;/*scals img to cover background area*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-top: -111px;/*sets the top margin of the element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.appdownload {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  padding-bottom: 50px;/*padding size in pixels from the bottom*/
+  padding-top: 59px;/*padding size in pixels from the top*/
+  text-align: center;/*centers the text*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.appdownload p{
+  color: #fff;/*foreground colour of text or element*/
+  font-size: 30px;  
+}
+.appdownload p > span { 
+  margin-right: 5px;/*sets the right margin of the element*/
+}
+.appdown_btn{
+  margin-top: 36px;/*sets the top margin of the element*/
+}
+
+
+/*--------------------*/
+/* Gallery Section */
+/*--------------------*/
+
+
+#gallerySection {
+  background-color: #FFFFFF;/*sets background colour of the element*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  padding-top: 80px;
+  text-align: center;/*centers the text*/
+  margin-bottom: 50px;
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+
+#gallerySection>p{
+  color: #606060; /*foreground colour of text or element*/
+  margin-bottom: 12px;/*sets the bottom margin of the element*/
+  font-size: 18px;
+  padding: 0 10%;
+}
+/*gallery images styling*/
+.gallery img {
+  float: left;/*element float to the left*/
+  padding: 0 1px 1px 0;
+}
+
+.gallerySection_area {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  text-align: center;/*centers the text*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+
+.single_gallerySection_area {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-top: 40px; /*sets the top margin of the element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+
+/*--------------------*/
+/* TRAILER SECTION */
+/*--------------------*/
+
+#trailerSection {
+  background-image: url("img/background/white.png");
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  min-height: 500px;/*sets the height of the element*/
+  padding: 100px 0;
+  text-align: center;/*centers the text*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  background-size: cover;
+  background-attachment: fixed;
+}
+.trailer_area{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.trailer_area> p {
+  color: #606060; /*foreground colour of text or element*/
+  font-size: 20px;
+  margin-top: 25px;/*sets the top margin of the element*/
+}
+.featured_trailer {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  height: 540px;/*sets the height of the element*/
+  margin-top: 50px;/*sets the top margin of the element*/
+  padding: 0 6%;
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+
+/*--------------------*/
+/* REVIEW SECTION */
+/*--------------------*/
+
+#testimonial {
+  background-color: #FFFFFF;/*sets background colour of the element*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  padding: 100px 0 150px;
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.testimonial_area{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  text-align: center;/*centers the text*/
+}
+.testimonial_area > p {
+  color: #606060;/*foreground colour of text or element*/
+  font-size: 20px;
+  margin-top: 25px;/*sets the top margin of the element*/
+}
+.testimonial_slider {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-top: 70px;/*sets the top margin of the element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.slider_content{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  text-align: center;/*centers the text*/
+}
+.slider_content p {
+  color: #909090;/*foreground colour of text or element*/
+  font-size: 20px;
+  margin-top: 20px;/*sets the top margin of the element*/
+}
+.slider_content p > i {
+  color: #FF0000;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  font-size: 22px;
+  margin: 0 4px;
+}
+.slider_content span {
+  color: #CCCCCC;/*foreground colour of text or element*/
+  display: block;  
+  font-size: 20px;
+}
+.carousel-indicators {
+  bottom: 10px;
+  left: 50%;
+  list-style: none outside none;
+  margin-left: -30%;/*sets the left margin of the element*/
+  padding-left: 0;/*padding size in pixels from the left*/
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  text-align: center;/*centers the text*/
+  top: 110%;
+  width: 60%;
+  z-index: 15;
+}
+.carousel-indicators li {
+  background-color: rgba(0, 0, 0, 0);/*sets background colour of the element*/
+  border: 1px solid #FF0000;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;/*inline element that behaves like a block element*/
+  height: 10px;/*sets the height of the element*/
+  margin: 1px;
+  text-indent: -999px;
+  width: 10px;
+}
+.carousel-indicators .active {
+  background-color: #FF0000;/*sets background colour of the element*/
+  height: 12px;/*sets the height of the element*/
+  margin: 0;
+  width: 12px;
+}
+
+
+/*--------------------*/
+/* REVIEW SECTION 2 */
+/*--------------------*/
+
+#reviews {
+  background-color: rgba(0,0,0,0.89);/*sets background colour of the element*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  padding: 100px 0;
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.reviews_area{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width:100%;
+  text-align: center;/*centers the text*/
+}
+.reviews_area p {
+  font-size: 18px;
+  color: #606060;/*foreground colour of text or element*/
+}
+.review_slider {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-top: 106px;/*sets the top margin of the element*/
+  position: relative;/*positioned relative to its normal position, behaves similar to static but can edit extra properties*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.review_slider ul{
+  margin: 0;
+  padding: 0;
+}
+.review_slider li {
+  float: left;/*element float to the left*/
+  list-style: none outside none;
+  margin-right: 80px;/*sets the right margin of the element*/
+}
+.review_slider li:last-child{
+  margin-left: 70px;/*sets the left margin of the element*/
+}
+.review_slider li a {
+  display: block;
+  float: left;/*element float to the left*/
+  height: 100%;
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.reviewSlider_left {
+  border: 1px solid #DDDDDD;
+  border-radius: 100%;
+  color: #DCDCDC;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  font-size: 27px;
+  height: 42px;/*sets the height of the element*/
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  right: 120px;
+  top: -200px;
+  width: 42px;
+}
+.reviewSlider_right{
+  border: 1px solid #DDDDDD;
+  border-radius: 100%;
+  color: #DCDCDC;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  font-size: 27px;
+  height: 42px;/*sets the height of the element*/
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  right: 60px;
+  top: -200px;
+  width: 42px;
+}
+.reviewSlider_left:hover,.reviewSlider_left:focus,.reviewSlider_right:hover,.reviewSlider_right:focus{
+  background-color: #FF0000;/*sets background colour of the element*/
+  color: #fff;/*foreground colour of text or element*/
+  text-decoration: none;
+  outline: none;/*sets the outline(drawn line) of an element*/
+  border: 1px solid #FF0000;
+}
+
+
+/*--------------------*/
+/* NEWSLETTER */
+/*--------------------*/
+
+#newsletter {
+  background-image: url("img/stuff.png");
+  background-repeat: no-repeat;/*image will not be repeated*/
+  background-size: cover;/*scals img to cover background area*/
+  background-attachment: fixed; /*Image stays while scrolling for pallax effect*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  padding: 100px 0;
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.newsletter_area{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.newsletter_left{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.newsletter_left h2{
+  margin-top: 0px;/*sets the top margin of the element*/
+  color: #fff;/*foreground colour of text or element*/
+  font-size: 45px;  
+}
+.newsletter_left h2 > span {
+  color: #FF0000; /*foreground colour of text or element*/ 
+  margin-left: 8px;/*sets the left margin of the element*/
+}
+.newsletter_left p{
+  margin-top: 0px;/*sets the top margin of the element*/
+  color: #fff;/*foreground colour of text or element*/
+  font-size:18px; 
+}
+.newsletter_right{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  margin-top: 10px;/*sets the top margin of the element*/
+}
+.newsletter_right form {
+  background: none repeat scroll 0 0 #FFFFFF;
+  margin: 0;
+  width: 530px;  
+}
+.newsletter_right form input[type="email"] {
+  border: medium none;
+  color: #909090;/*foreground colour of text or element*/
+  font-size: 18px;
+  height: 70px;/*sets the height of the element*/
+  outline: medium none;/*sets the outline(drawn line) of an element*/
+  padding-left: 20px; /*padding size in pixels from the left*/
+  padding-right: 10px; /*padding size in pixels from the right*/
+  width: 360px;
+}
+.newsletter_right form input[type="submit"] {
+  background-color: #FF0000;/*sets background colour of the element*/
+  border: medium none;
+  color: #FFFFFF;/*foreground colour of text or element*/
+  font-size: 18px;
+  height: 50px;/*sets the height of the element*/
+  margin: 10px 0;
+  outline: medium none;/*sets the outline(drawn line) of an element*/
+  width: 160px;
+  font-weight: bold;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.newsletter_right form input[type="submit"]:hover,.newsletter_right form input[type="submit"]:focus{
+  background-color: #333;/*sets background colour of the element*/
+}
+
+/*--------------------*/
+/* CONTACT */
+/*--------------------*/
+
+#contact {
+  background: none repeat scroll 0 0 #F8F8F8;
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/ 
+  padding: 100px 0; /*padding from top*/
+  width: 100%;/*sets width of the element in percent of the container*/ /*width within the container*/
+}
+.contact_area {
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  position: relative;/*positioned relative to its normal position, behaves similar to static but can edit extra properties*/
+  text-align: center;/*centers the text*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+.contact_area h1{
+  margin-top: 0px;/*sets the top margin of the element*/
+}
+.contact_area p {
+  color: #606060;/*foreground colour of text or element*/
+  font-size: 20px;  
+}
+.contact_left{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  text-align: left;
+  margin-top: 58px;/*sets the top margin of the element*/
+}
+.contact_left h1 {    
+  font-size: 30px;
+  margin-top: 0;/*sets the top margin of the element*/
+  margin-bottom: 0px;/*sets the bottom margin of the element*/
+}
+.contact_media {
+  margin-bottom: -10px;/*sets the bottom margin of the element*/
+}
+.contact_media i {
+  color: #FF0000;/*foreground colour of text or element*/
+  display: inline-block;/*inline element that behaves like a block element*/
+  float: left !important;
+  font-size: 25px;
+  margin-right: 12px;/*sets the right margin of the element*/
+  margin-top: 5px;/*sets the top margin of the element*/
+  text-align: center;/*centers the text*/
+  width: 20px;
+}
+.contact_media_body h4{
+  color: #606060;  /*foreground colour of text or element*/
+  font-size: 15px;
+}
+.contact_right{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/ 
+  margin-top: 58px;/*sets the top margin of the element*/
+}
+.footer_form input {
+  border-radius: 0px;
+  color: #909090;  /*foreground colour of text or element*/
+}
+.footer_form input[type="text"] {
+  font-size: 15px;
+  height: 30px;/*sets the height of the element*/
+  margin-bottom: 30px;/*sets the bottom margin of the element*/
+  padding-left: 15px; /*padding size in pixels from the left*/
+  padding-right: 15px; /*padding size in pixels from the right*/
+}
+.footer_form input[type="email"]{
+  font-size: 15px;
+  height: 50px;/*sets the height of the element*/
+  margin-bottom: 30px;/*sets the bottom margin of the element*/
+  padding-left: 15px; /*padding size in pixels from the left*/
+  padding-right: 15px;  /*padding size in pixels from the right*/
+}
+
+.footer_form textarea{
+  color:#909090;/*foreground colour of text or element*/
+  font-size:15px;
+  height:180px;/*sets the height of the element*/
+  padding:18px 15px;
+  /*border-radius*/
+  -webkit-border-radius:0px;
+     -moz-border-radius:0px;
+          border-radius:0px;
+}
+.contact_sendbtn {
+  background-color: #FF0000;/*sets background colour of the element*/
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF !important;/*foreground colour of text or element*/
+  float: left;/*element float to the left*/
+  font-size: 18px;
+  height: 50px;/*sets the height of the element*/
+  margin-top: 18px;/*sets the top margin of the element*/
+  outline: medium none;/*sets the outline(drawn line) of an element*/
+  text-align: center;/*centers the text*/
+  width: 120px;  
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.contact_sendbtn:hover,.contact_sendbtn:focus{
+  border-color: #FF0000;
+  background-color: #ffffff;/*sets background colour of the element*/
+  color: #FF0000 !important;/*foreground colour of text or element*/
+}
+.google_map {
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  float: left;/*element float to the left*/
+  margin-top: 50px;/*sets the top margin of the element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+#map_canvas{
+  width: 100%;/*sets width of the element in percent of the container*/
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  height: 404px;/*sets the height of the element*/
+}
+
+/*--------------------*/
+/* FOOTER */
+/*--------------------*/
+
+#footer{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  background-color: #fff;/*sets background colour of the element*/
+  padding: 25px 0px
+}
+.footer_area{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  text-align: center;/*centers the text*/
+}
+.footer_area p{
+  color: #909090;/*foreground colour of text or element*/
+  font-size: 15px; 
+}
+.footer_area p>a{
+  color: #FF0000;/*foreground colour of text or element*/
+  margin-right: 5px;/*sets the right margin of the element*/
+}
+.slider_area{
+  float: left;/*element float to the left*/
+  display: inline; /*no break before or after, tolerares html elements next to it*/
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+
+
+/*--------------------*/
+/* BOOKING TICKET */
+/*--------------------*/
+
+.box{
+  margin-top: 130px;/*sets the top margin of the element*/
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: calc(50% - 125px);
+  top: -webkit-calc(50% - 125px);
+  left: calc(50% - 300px);
+  left: -webkit-calc(50% - 300px);
+}
+
+.ticket{
+  width: 600px;
+  height: 250px;/*sets the height of the element*/
+  background: #FF0000;
+  border-radius: 3px;
+  box-shadow: 0 0 100px #aaa;
+  border-top: 1px solid #FF0000;
+  border-bottom: 1px solid #FF0000;
+}
+
+.ticketleft{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 0px;
+  left: -5px;
+}
+
+.ticketleft li{
+  width: 0px;
+  height: 0px;/*sets the height of the element*/
+}
+
+.ticketleft li:nth-child(-n+2){
+  margin-top: 8px;/*sets the top margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #FF0000;
+}
+
+.ticketleft li:nth-child(3),
+.ticketleft li:nth-child(6){
+  margin-top: 8px;/*sets the top margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #EEEEEE;
+}
+
+.ticketleft li:nth-child(4){
+  margin-top: 8px;/*sets the top margin of the element*/
+  margin-left: 2px;/*sets the left margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #EEEEEE;
+}
+
+.ticketleft li:nth-child(5){
+  margin-top: 8px;/*sets the top margin of the element*/
+  margin-left: -1px;/*sets the left margin of the element*/
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent; 
+  border-right: 6px solid #EEEEEE;
+}
+
+.ticketleft li:nth-child(7),
+.ticketleft li:nth-child(9),
+.ticketleft li:nth-child(11),
+.ticketleft li:nth-child(12){
+  margin-top: 7px;/*sets the top margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #E5E5E5;
+}
+
+.ticketleft li:nth-child(8){
+  margin-top: 7px;/*sets the top margin of the element*/
+  margin-left: 2px;/*sets the left margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #E5E5E5;
+}
+
+.ticketleft li:nth-child(10){
+  margin-top: 7px;/*sets the top margin of the element*/
+  margin-left: 1px;/*sets the left margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #E5E5E5;
+}
+
+.ticketleft li:nth-child(13){
+  margin-top: 7px;/*sets the top margin of the element*/
+  margin-left: 2px;/*sets the left margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #FF0000;
+}
+
+.ticketleft li:nth-child(14){
+  margin-top: 7px;/*sets the top margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #FF0000;
+}
+
+.ticketright{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 0px;
+  right: -5px;
+}
+
+.ticketright li:nth-child(-n+2){
+  margin-top: 8px;/*sets the top margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid #FF0000;
+}
+
+.ticketright li:nth-child(3),
+.ticketright li:nth-child(4),
+.ticketright li:nth-child(6){
+  margin-top: 8px;/*sets the top margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid #EEEEEE;
+}
+
+.ticketright li:nth-child(5){
+  margin-top: 8px;/*sets the top margin of the element*/
+  margin-left: -2px;/*sets the left margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid #EEEEEE;
+}
+
+.ticketright li:nth-child(8),
+.ticketright li:nth-child(9),
+.ticketright li:nth-child(11){
+  margin-top: 7px;/*sets the top margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid #E5E5E5;
+}
+
+.ticketright li:nth-child(7){
+  margin-top: 7px;/*sets the top margin of the element*/
+  margin-left: -3px;/*sets the left margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid #E5E5E5;
+}
+
+.ticketright li:nth-child(10){
+  margin-top: 7px;/*sets the top margin of the element*/
+  margin-left: -2px;/*sets the left margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid #E5E5E5;
+}
+
+.ticketright li:nth-child(12){
+  margin-top: 7px;/*sets the top margin of the element*/
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent; 
+  border-left: 6px solid #E5E5E5;
+}
+
+.ticketright li:nth-child(13),
+.ticketright li:nth-child(14){
+  margin-top: 7px;/*sets the top margin of the element*/
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid #FF0000;
+}
+
+.ticket:after{
+  content: '';
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  right: 200px;
+  top: 0px;
+  width: 2px;
+  height: 250px;/*sets the height of the element*/
+  box-shadow: inset 0 0 0 #FF0000,
+    inset 0 -10px 0 #B56E0A,
+    inset 0 -20px 0 #FF0000,
+    inset 0 -30px 0 #B56E0A,
+    inset 0 -40px 0 #FF0000,
+    inset 0 -50px 0 #999999,
+    inset 0 -60px 0 #E5E5E5,
+    inset 0 -70px 0 #999999,
+    inset 0 -80px 0 #E5E5E5,
+    inset 0 -90px 0 #999999,
+    inset 0 -100px 0 #E5E5E5,
+    inset 0 -110px 0 #999999,
+    inset 0 -120px 0 #E5E5E5,
+    inset 0 -130px 0 #999999,
+    inset 0 -140px 0 #E5E5E5,
+    inset 0 -150px 0 #B0B0B0,
+    inset 0 -160px 0 #EEEEEE,
+    inset 0 -170px 0 #B0B0B0,
+    inset 0 -180px 0 #EEEEEE,
+    inset 0 -190px 0 #B0B0B0,
+    inset 0 -200px 0 #EEEEEE,
+    inset 0 -210px 0 #B0B0B0,
+    inset 0 -220px 0 #FF0000,
+    inset 0 -230px 0 #B56E0A,
+    inset 0 -240px 0 #FF0000,
+    inset 0 -250px 0 #B56E0A;
+}
+
+.ticket:before{
+  content: '';
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  z-index: 5;
+  right: 199px;
+  top: 0px;
+  width: 1px;
+  height: 250px;/*sets the height of the element*/
+  box-shadow: inset 0 0 0 #FFFFFF,
+    inset 0 -10px 0 #FFFFFF,
+    inset 0 -20px 0 #FFFFFF,
+    inset 0 -30px 0 #FFFFFF,
+    inset 0 -40px 0 #FFFFFF,
+    inset 0 -50px 0 #FFFFFF,
+    inset 0 -60px 0 #FFFFFF,
+    inset 0 -70px 0 #FFFFFF,
+    inset 0 -80px 0 #FFFFFF,
+    inset 0 -90px 0 #FFFFFF,
+    inset 0 -100px 0 #FFFFFF,
+    inset 0 -110px 0 #FFFFFF,
+    inset 0 -120px 0 #FFFFFF,
+    inset 0 -130px 0 #FFFFFF,
+    inset 0 -140px 0 #FFFFFF,
+    inset 0 -150px 0 #FFFFFF,
+    inset 0 -160px 0 #FFFFFF,
+    inset 0 -170px 0 #FFFFFF,
+    inset 0 -180px 0 #FFFFFF,
+    inset 0 -190px 0 #FFFFFF,
+    inset 0 -200px 0 #FFFFFF,
+    inset 0 -210px 0 #FFFFFF,
+    inset 0 -220px 0 #FFFFFF,
+    inset 0 -230px 0 #FFFFFF,
+    inset 0 -240px 0 #FFFFFF,
+    inset 0 -250px 0 #FFFFFF;
+}
+
+.content{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 40px;
+  width: 100%;/*sets width of the element in percent of the container*/
+  height: 170px;/*sets the height of the element*/
+  background: #eee;
+}
+
+.airline{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 10px;
+  left: 10px;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;/*foreground colour of text or element*/
+}
+
+.boarding{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 10px;
+  right: 220px;
+  font-family: Arial;
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);/*foreground colour of text or element with an opacity(0.6)*/
+}
+
+.jfk{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 10px;
+  left: 10px;
+  font-family: "Roboto";
+  font-size: 18px;
+  color: #222;/*foreground colour of text or element*/
+}
+
+.sfo{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 10px;
+  left: 180px;
+  font-family: Arial;
+  font-size: 38px;
+  color: #222;/*foreground colour of text or element*/
+}
+
+.plane{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  left: 105px;
+  top: 0px;
+}
+
+.sub-content{
+  background: #e5e5e5;
+  width: 100%;/*sets width of the element in percent of the container*/
+  height: 105px;/*sets the height of the element*/
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 70px;
+}
+
+.watermark{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  left: 5px;
+  top: -10px;
+  font-family: Arial;
+  font-size: 110px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.2);/*foreground colour of text or element with an opacity(0.2)*/
+}
+
+.name{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 10px;
+  left: 10px;
+  font-family: Arial Narrow, Arial;
+  font-weight: bold;
+  font-size: 14px;
+  color: #999;/*foreground colour of text or element*/
+}
+
+.name span{
+  color: #555;/*foreground colour of text or element*/
+  font-size: 17px;
+}
+
+.flight{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 10px;
+  left: 180px;
+  font-family: Arial Narrow, Arial;
+  font-weight: bold;
+  font-size: 14px;
+  color: #999;/*foreground colour of text or element*/
+}
+
+.flight span{
+  color: #555;/*foreground colour of text or element*/
+  font-size: 17px;
+}
+
+.gate{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 10px;
+  left: 280px;
+  font-family: Arial Narrow, Arial;
+  font-weight: bold;
+  font-size: 14px;
+  color: #999;/*foreground colour of text or element*/
+}
+
+.gate span{
+  color: #555;/*foreground colour of text or element*/
+  font-size: 17px;
+}
+
+
+.seat{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 10px;
+  left: 350px;
+  font-family: Arial Narrow, Arial;
+  font-weight: bold;
+  font-size: 14px;
+  color: #999;/*foreground colour of text or element*/
+}
+
+.seat span{
+  color: #555;/*foreground colour of text or element*/
+  font-size: 17px;
+}
+
+.boardingtime{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 60px;
+  left: 10px;
+  font-family: Arial Narrow, Arial;
+  font-weight: bold;
+  font-size: 14px;
+  color: #999;/*foreground colour of text or element*/
+}
+
+.boardingtime span{
+  color: #555;/*foreground colour of text or element*/
+  font-size: 17px;
+}
+
+.barcode{
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  left: 8px;
+  bottom: 6px;
+  height: 28px;/*sets the height of the element*/
+  width: 90px;
+  background: #222;
+  /*(below) inner shadow*/
+  box-shadow: inset 0 1px 0 #FF0000, inset -2px 0 0 #FF0000, 
+    inset -4px 0 0 #222,
+    inset -5px 0 0 #FF0000,
+    inset -6px 0 0 #222,
+    inset -9px 0 0 #FF0000,
+    inset -12px 0 0 #222,
+    inset -13px 0 0 #FF0000,
+    inset -14px 0 0 #222,
+    inset -15px 0 0 #FF0000,
+    inset -16px 0 0 #222,
+    inset -17px 0 0 #FF0000,
+    inset -19px 0 0 #222,
+    inset -20px 0 0 #FF0000,
+    inset -23px 0 0 #222,
+    inset -25px 0 0 #FF0000,
+    inset -26px 0 0 #222,
+    inset -26px 0 0 #FF0000,
+    inset -27px 0 0 #222,
+    inset -30px 0 0 #FF0000,
+    inset -31px 0 0 #222,
+    inset -33px 0 0 #FF0000,
+    inset -35px 0 0 #222,
+    inset -37px 0 0 #FF0000,
+    inset -40px 0 0 #222,
+    inset -43px 0 0 #FF0000,
+    inset -44px 0 0 #222,
+    inset -45px 0 0 #FF0000,
+    inset -46px 0 0 #222,
+    inset -48px 0 0 #FF0000,
+    inset -49px 0 0 #222,
+    inset -50px 0 0 #FF0000,
+    inset -52px 0 0 #222,
+    inset -54px 0 0 #FF0000,
+    inset -55px 0 0 #222,
+    inset -57px 0 0 #FF0000,
+    inset -59px 0 0 #222,
+    inset -61px 0 0 #FF0000,
+    inset -64px 0 0 #222,
+    inset -66px 0 0 #FF0000,
+    inset -67px 0 0 #222,
+    inset -68px 0 0 #FF0000,
+    inset -69px 0 0 #222,
+    inset -71px 0 0 #FF0000,
+    inset -72px 0 0 #222,
+    inset -73px 0 0 #FF0000,
+    inset -75px 0 0 #222,
+    inset -77px 0 0 #FF0000,
+    inset -80px 0 0 #222,
+    inset -82px 0 0 #FF0000,
+    inset -83px 0 0 #222,
+    inset -84px 0 0 #FF0000,
+    inset -86px 0 0 #222,
+    inset -88px 0 0 #FF0000,
+    inset -89px 0 0 #222,
+    inset -90px 0 0 #FF0000;
+}
+
+.slip{
+  left: 455px;
+}
+
+.nameslip{
+  top: 60px;
+  left: 410px;
+}
+
+.flightslip{
+  left: 410px;
+}
+
+.seatslip{
+  left: 540px;
+}
+
+.jfkslip{
+  font-size: 30px;
+  top: 20px;
+  left: 410px;
+}
+
+.sfoslip{
+  font-size: 30px;
+  top: 20px;
+  left: 530px;
+}
+
+.planeslip{
+  top: 10px;
+  left: 472px;
+  height:60px;
+  width: 60px;
+}
+
+.airlineslip{
+  left: 455px;
+}
+
+/*--------------------*/
+/* RESPONSIVE CSS */
+/*--------------------*/
+
+
+/*Responsive elements from 1199px width*/
+@media(max-width:1199px){
+    
+   html{width:100%;height:100%;overflow-x:hidden;}
+  .character_content h1 { font-size: 40px;}
+  .single_gallerySection {margin-bottom: 150px;}
+  .review_slider li {margin-right: 46px;}
+  .review_slider li:last-child { margin-left: 0;}
+  .up_btn{right: 0;}
+  .logo {font-size: 20px !important;}
+  .direction_icon {left: 41%;}
+  .dirc_up{margin-left: 0px;}
+  .slide_descright{margin-top: 12%;} 
+  .slidertext{font-size: 20px !important;}
+  .contact_right{margin-top:300px;}
+}
+/*Responsive elements from 1170px width*/
+@media(max-width:1170px){
+  .custom_nav {margin-top: 0;margin-bottom: 10px;}
+}
+/*Responsive elements from 991px width*/
+@media(max-width:991px){
+  .review_slider{display: none !important;}
+  .custom_nav {margin-top: 0;margin-bottom: 10px;}
+  .custom_nav li a { font-size: 14px;margin-left: 2px;margin-right: 2px;}
+  .single_about_responsive {margin-bottom: 25px;}
+  .character_content {margin-top: 75px;}
+  .secondabout_characters { margin-top: 75px;}
+  .appdownload_area { margin-top: 50px;}
+  .app_area { padding-bottom: 50px;} /* responsive padding size in pixels from the bottom*/
+  .chapterNav {width: 100%;/*sets width of the element in percent of the container*/}
+  .newsletter_left {text-align: center;/*centers the text*/}
+  .newsletter_right form {margin: 35px auto;}
+  .reviews_area h1 {font-size: 35px;text-align: left; text-align: center;/*centers the text*/}
+  .reviews_area p {text-align: left;}
+  .review_slider li {float: none;text-align: center;/*centers the text*/}
+  .review_slider li a {margin-bottom: 30px;}
+  .scrollToTop{ right: 5px;}
+  .slider_content > p {color: #909090;font-family: 'Roboto';font-size: 18px;padding: 0 53px;}
+  .navbar-header {text-align: center;/*centers the text*/width: 100%;/*sets width of the element in percent of the container*/}
+  .navbar-brand {float: left;margin: 11px auto 0 !important;width: 230px;}
+  .direction_icon {left: 39%;}
+  .slide_descright h1 {font-size: 20px;margin-bottom: 18px;}
+  .skdslider .slide-desc{top: 25%;}
+  .slide_descright p {font-size: 12px;}
+  .learnmore_btn {margin: 0 25px 20px;width: 140px; font-size: 15px;}
+  .download_btn {font-size: 15px;width: 140px;} 
+  .header_btnarea { margin-top: 40px;}
+  .skdslider .slide-desc > h1 {font-size: 35px;  margin-bottom: 0px;  margin-top: 106px;}
+  .skdslider .slide-desc > p {color: #FFFFFF;font-family: 'Roboto';font-size: 19px;line-height: 18px;margin-top:5px;padding: 8px;}
+  .skdslider {height: 500px;} 
+  .slidertext{font-size: 18px !important; margin-top:160px;}
+  .character_content h1{text-align: center;/*centers the text*/}
+  .contact_right {margin-top: 300px;}
+}
+/*Responsive elements from 767px width*/
+@media(max-width:767px){
+    #status {background-size:50%;}/*resized loading gif for smaller screens*/
+  .custom_nav li a {text-align: center;/*centers the text*/}
+  .navbar-toggle {float: right !important;}
+  .navbar-default {text-align: center;/*centers the text*/}
+  .logo {margin-bottom: 15px;width: 187px;}
+  .header_content h1 {font-size: 36px;}
+  .header_content {margin-top:130px;}
+  .header_content p {font-size: 18px;margin-top: 25px;}
+  .download_btn{margin-top:35px;}
+  .single_about_responsive {margin-bottom: 25px;}
+  .character_content {margin-top: 75px;}
+  .secondabout_characters { margin-top: 75px;}
+  .direction_icon { left: 30%;width: 170px;}
+  .testimonial_slider ul li {margin: 0 38px 25px;}
+  .newsletter_right form { background: none repeat scroll 0 0 rgba(0, 0, 0, 0);margin: 35px auto;width: 100%;/*sets width of the element in percent of the container*/}
+  .newsletter_right form input[type="email"] { width: 100%;/*sets width of the element in percent of the container*/margin-bottom: 20px;}
+  .newsletter_right form input[type="submit"] {width: 100%;/*sets width of the element in percent of the container*/}
+  .newsletter_left h2 {font-size: 34px;}
+  .newsletter_left p {font-size: 15px;margin-top: 20px;}
+  .apparea_content h1 { font-size: 30px !important;}
+  .appdownload p {font-size: 22px;}
+  .reviewSlider_left {top: -67px;}
+  .reviewSlider_right {top: -67px;}
+  .review_slider ul {margin: 35px 0 0;}
+  .scrollToTop{right: 20px;}
+  .custom_nav {background: none repeat scroll 0 0 ;margin-top: 0;}
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: #ff0000;}
+  .slider_content > p {color: #909090;font-family: 'Roboto';font-size: 17px;}
+  .dg-container nav {bottom: 8px;}
+  .skdslider {height: 400px;}
+  .slider_area {height: 400px;}
+  .skdslider .slide-desc {left: 0;max-width: 100%;/*sets width of the element in percent of the container*/right: 0;top: 10%;}
+  .skdslider .slide-desc > h1 {font-size: 18px;margin-bottom: 0;margin-top: 91px;}
+  .skdslider .slide-desc > p {font-size: 15px;line-height: 16px;margin-top: 0;padding: 8px;}
+  .header_btnarea {margin-top: 10px;}
+  .featured_trailer{height: auto;}
+  .about_responsive {padding: 0 5%;}
+  .single_about_responsive {margin-left: 0px;}
+  .direction_icon {left: 37%;}
+  .navbar-nav.navbar-right:last-child {margin-right: -16px;}
+  .slide_descleft {display: none;}/* when mobile device found slide descleft mobile app img will be hidden*/
+  .slide_descright{width: 100%;/*sets width of the element in percent of the container*/padding: 0 2%;}
+  .container > .navbar-header, .container > .navbar-collapse {margin-left: 0px; margin-right: 0px;}
+  .navbar-collapse{ margin-top: 90px !important;}
+  .navbar-toggle{margin-right: 0px;}
+  .slidertext{font-size: 18px !important;}
+
+}
+/*Responsive elements from 640px width*/
+@media(max-width:640px){
+ .slide_descright h1 {margin-top: 20px;}
+  .slidertext{font-size: 17px !important;}
+}
+/*Responsive elements from 607px width*/
+@media(max-width:607px){
+  .ticket{width:500px;}
+  .box{margin-left:8%;}
+  .seat{display: none;}
+  .jfkslip{display: none;}
+  .airlineslip{display:none;}
+  .sfoslip{display: none;}
+  .planeslip{display: none;}
+  .flightslip{display: none;}
+  .nameslip{display: none;}
+  .slip{display: none;}
+  .gate{display: none;}
+  .ticket:after{display: none;}
+  .ticket:before{display: none;}
+}
+.ticketamount{
+  width: 100%;
+}
+/*Responsive elements from 550px width*/
+@media(max-width:550px){
+   html{width:100%;height:100%;overflow-x:hidden;}
+   h1{font-size:40px;}
+  .ticket{width:400px;}
+  .box{margin-left:20%;}
+  .seat{display: none;}
+  .jfkslip{display: none;}
+  .sfoslip{display: none;}
+  .planeslip{display: none;}
+  .flightslip{display: none;}
+  .nameslip{display: none;}
+  .slip{display: none;}
+  .gate{display: none;}
+  .ticket:after{display: none;}
+  .ticket:before{display: none;}
+}
+
+/*Responsive elements from 480px width*/
+
+@media(min-width:480px){
+  .ticketamount{display: none;}
+  .namerespond{display: none;}
+}
+@media(max-width:480px){
+  .share-links{margin-left: 13.5em !important;}/*sets the left margin of the element*/
+   h1{font-size:37px;}
+  .single_about_responsive h2{font-size:25px;}
+  .contact_right{margin-top: 0px;}
+  .ticket{display: none;}
+  .box{display: none;}
+  .direction_icon {left: 28%;}
+  .slide_descright h1 {margin-top: 35px;}
+  .learnmore_btn {margin: 0 25px 0px; margin-top:60%;}
+  .slidertext{display:none;}
+}
+/*Responsive elements from 360px width*/
+@media(max-width:360px){
+    
+  .share-links{margin-left: 12.5em !important;}/*sets the left margin of the element*/
+   h1{font-size:30px;}
+  .slide_descright h1 {margin-top: 40px;}
+  .download_btn {margin-top: 20px;}
+  .newsletter_left h2 {font-size: 26px;}
+  .slidertext{font-size: 13px !important;}
+}
+/*Responsive elements from 320px width*/
+@media(max-width:320px){
+    .single_about_responsive h2{font-size:20px;}
+  .direction_icon {left: 25%;}
+  .slide_descright h1 {margin-top: 45px;}
+  .learnmore_btn {font-size: 14px;width: 120px;padding: 8px 0px;}
+  .download_btn {margin-top: 20px;width: 120px;font-size: 14px;padding: 8px 0px;}
+}
+
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;/*selects font*/
+}
+/*sharing button*/
+.share-links {
+  font-size: 16px; /*size of button*/
+  transform-style: preserve-3d;
+  width: 3em;
+  height: 3em;/*sets the height of the element*/
+  line-height: 3em; /*sets the line height e.g. the space between lines in the text content*/
+  text-align: center;/*centers the text*/
+  position: absolute;
+  bottom: 10px;
+  margin-left: 18.5em;/*sets the left margin of the element*/
+  margin-top: -1.5em;/*sets the top margin of the element*/
+  transform: rotateX(-35deg);/*hex shape*/
+  z-index:9998;
+}
+/*sharing button open hexagon*/
+.share-links:after {
+  content: "\f045";
+  color: #B8AA8F;/*foreground colour of text or element*/
+  font-family: 'FontAwesome', sans-serif;/*selects font*/
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 50%;
+  left: 50%;
+  z-index: 9998; /* sits on top of all elements */
+  transform: translate3d(0, -30px, 50px);/*angle to give 3d box effect*/
+  margin-left: -0.4em;/*sets the left margin of the element*/
+  font-size: 1.5em;
+  transition: 200ms ease all;/*transition time when hovered over revealing the links*/
+}
+
+.share-links:hover:after {
+  opacity: 0;
+  transform: translate3d(0, -100%, 50px);
+}
+
+.share-links > li {
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  height: 100%;/*sets the height of the element in perecent of the containing block*/
+  transform-style: preserve-3d;
+}
+
+.share-links > li a {
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  height: 100%;/*sets the height of the element in perecent of the containing block*/
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: white;/*foreground colour of text or element*/
+  background: white;
+  transition: 500ms ease all;
+}
+
+.share-links > li a span {
+  color: currentColor;/*foreground colour of text or element*/
+  transition: 500ms ease all;
+}
+
+.share-links:hover > li a span {
+  color: #fff;/*foreground colour of text or element*/
+}
+
+.share-links > li a:before,
+.share-links > li a:after {
+  transition: 500ms ease all;
+  background: currentColor;
+}
+
+.share-links > li a:before {
+  height: 0;/*sets the height of the element*/
+  width: 100%;/*sets width of the element in percent of the container*/
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
+}
+
+.share-links > li a:after {
+  width: 0;
+  height: 100%;/*sets the height of the element in perecent of the containing block*/
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+}
+
+.share-links:hover > li a:before {
+  height: 100%;/*sets the height of the element in perecent of the containing block*/
+}
+
+.share-links:hover > li a:after {
+  width: 100%;/*sets width of the element in percent of the container*/
+}
+
+.share-links > li.facebook {
+  top: 0;
+  right: 50%;
+  transform: rotateY(45deg);/*angle of 3d box for facebook*/
+  transform-origin: 100% 0;
+}
+
+.share-links:hover > li.facebook a,
+.share-links:hover > li.facebook a:before,
+.share-links:hover > li.facebook a:after {
+  background-color: rgb(59, 89, 152);/*sets background colour of the element*/
+  color: rgb(59, 89, 152);/*foreground colour of text or element*/
+}
+
+.share-links:hover > li.facebook a:hover,
+.share-links:hover > li.facebook a:hover:before,
+.share-links:hover > li.facebook a:hover:after {
+  background-color: rgb(71, 104, 173);/*sets background colour of the element*/
+  color: rgb(71, 104, 173);/*foreground colour of text or element*/
+}
+
+.share-links > li.twitter {
+  top: 0;
+  left: 50%;
+  transform: rotateY(-45deg);/*angle of 3d box for twitter*/
+  transform-origin: 0 0;
+}
+
+.share-links:hover > li.twitter a,
+.share-links:hover > li.twitter a:before,
+.share-links:hover > li.twitter a:after {
+  background-color: rgb(85, 172, 238);/*sets background colour of the element*/
+  color: rgb(85, 172, 238);/*foreground colour of text or element*/
+}
+
+.share-links:hover > li.twitter a:hover,
+.share-links:hover > li.twitter a:hover:before,
+.share-links:hover > li.twitter a:hover:after {
+  background-color: rgb(98, 187, 255);/*sets background colour of the element*/
+  color: rgb(98, 187, 255);/*foreground colour of text or element*/
+}
+
+.share-links > li.googleplus {
+  top: 100%;
+  right: 50%;
+  transform: rotateY(45deg) rotateX(90deg);/*angle of 3d box for googleplus*/
+  transform-origin: 100% 0%;
+}
+
+.share-links:hover > li.googleplus a,
+.share-links:hover > li.googleplus a:before,
+.share-links:hover > li.googleplus a:after {
+  background-color: rgb(211, 72, 54);/*sets background colour of the element*/
+  color: rgb(211, 72, 54);/*foreground colour of text or element*/
+}
+
+.share-links:hover > li.googleplus a:hover,
+.share-links:hover > li.googleplus a:hover:before,
+.share-links:hover > li.googleplus a:hover:after {
+  background-color: rgb(239, 87, 68);/*sets background colour of the element*/
+  color: rgb(239, 87, 68);/*foreground colour of text or element*/
+}
+
+.share-links > li.googleplus a:after {
+  content: '';
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 0;
+  right: 100%;
+  transform: rotateY(-90deg);
+  transform-origin: 100% 0;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+}
+
+.share-links > li.googleplus a:before {
+  content: '';
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 100%;
+  left: 0;
+  transform: rotateX(-90deg);
+  transform-origin: 0% 0;
+  box-shadow: none
+}
+
+.share-links:hover > li.googleplus a {
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.1);
+}
+
+.share-links > li.facebook a:before {
+  content: '';
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 0;
+  left: 0;
+  transform: rotateX(-90deg);
+  transform-origin: 0 0;
+}
+
+.share-links > li.facebook a:after {
+  content: '';
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 0;
+  right: 100%;
+  transform: rotateY(-90deg);
+  transform-origin: 100% 0;
+}
+
+.share-links > li.twitter a:before {
+  content: '';
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 0;
+  left: 0;
+  width: 100%;/*sets width of the element in percent of the container*/
+  transform: rotateX(-90deg);
+  transform-origin: 0 0;
+}
+
+.share-links > li.twitter a:after {
+  content: '';
+  position: absolute;/*positioned relative to its first positioned non static ancestor element*/
+  top: 0;
+  left: 100%;
+  transform: rotateY(90deg);
+  transform-origin: 0% 0;
+  box-shadow: none;
+}
+
+.share-links:hover > li.twitter a {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+}
